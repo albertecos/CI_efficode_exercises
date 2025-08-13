@@ -11,3 +11,9 @@ jobs:
         run: ci/build-app.sh
       - name: Run tests
         run: ci/unit-test-app.sh
+      - name: Uplead repo
+        uses: actions/upload-artifact@v4
+        with: 
+          name: code
+          path: .
+          include-hidden-files: true
